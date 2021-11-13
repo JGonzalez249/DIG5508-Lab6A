@@ -2,5 +2,5 @@
  Lab 6A Data Driven Collaboration
 
  - Jonathan Gonzalez
- - Christina
+ - Christina lalala
  - Pocky
