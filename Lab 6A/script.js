@@ -1,6 +1,8 @@
 function setup() {
   createCanvas(400, 400);
-  getAnimalFact()
+  getAnimalFact().then((data) => {
+    console.log(data);
+ })
 }
 
 function draw() {
@@ -8,13 +10,19 @@ function draw() {
 }
 
 function getAnimalFact(){
-  var fact = Math.floor(Math.random() * 5)
-  fetch('https://anime-facts-rest-api.herokuapp.com/api/v1/fma_brotherhood/' + fact, {
-    method: 'GET', // The method
+  var fact = Math.floor(Math.random() * 5) + 1
+  var URL = 'https://anime-facts-rest-api.herokuapp.com/api/v1/fma_brotherhood/' + fact.toString()
+  return fetch(URL, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
   }).then(response => {
-    console.log(response.body)
     return response.json();
+  }).then(data => {
+    // console.log(data.data.fact)
+    return data.data.fact
   }).catch(err => {
-    // In case it errors.
+    console.log(err)
   })
 }
