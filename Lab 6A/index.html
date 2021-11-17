@@ -7,20 +7,34 @@
       <!--References the CSS Stylesheet for the webpage.-->
       <link rel="stylesheet" type="text/css" href="style.css">
       <meta charset="UTF-8">
-      <meta name="description" content="Search for music lyrics from your favorite songs">
+      <meta name="description" content="Search for an anime to get a random fact">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="authors" content="Jonathan Gonzalez, Christina Leskowyak, Hongbing Pan">
-      <title>Lyrics Look Up</title>
+      <title>Anime Facts Look Up</title>
    </head>
    <body>
       <!--Section that contains the lyrics look up, user input happens here-->
-      <section id="lyrics-look-up">
+      <section id="anime-look-up">
          <div class="container">
-            <h1>Lyrics Look Up</h1>
-            <p>Type your favorite song and you'll get lyrics from the song!</p>
-            <form id="search-form">
-               <input type="text" id="query" value="" class="form-control" placeholder="Type a song name"/>
-               <input type="submit" id="search" class="btn btn-primary" value="Search"/>
+            <h1>Anime Facts Look Up</h1>
+            <p>Type your favorite anime and you'll get a random fact from it!</p>
+            <form method="post">
+               <!-- <input type="text" id="query" value="" class="form-control" placeholder="Type a anime name"/>
+               <input type="submit" id="search" class="btn btn-primary" value="Search"/> -->
+               <select name="Anime">
+                  <option value="fma_brotherhood">Full Metal Alchemist</option>
+                  <option value="black_clover">Black Clover</option>
+                  <option value="dragon_ball">Dragon Ball</option>
+                  <option value="bleach">Bleach</option>
+                  <option value="jujutsu_kaisen">Jujutsu Kaisen</option>
+                  <option value="naruto">Naruto</option>
+                  <option value="gintama">Gintama</option>
+                  <option value="one_piece">One Piece</option>
+                  <option value="demon_slayer">Demon Slayer</option>
+                  <option value="attack_on_titan">Attack on Titan</option>
+                  <option value="hunter_x_hunter">Hunter x Hunter</option>
+                  <option value="boku_no_hero_academia">My Hero Academia</option>
+               </select>
             </form>
          </div>
       </section>
