@@ -18,25 +18,32 @@
          <div class="container">
             <h1>Anime Facts Look Up</h1>
             <p>Type your favorite anime and you'll get a random fact from it!</p>
-            <form method="post">
+            <form method="get">
                <!-- <input type="text" id="query" value="" class="form-control" placeholder="Type a anime name"/>
                <input type="submit" id="search" class="btn btn-primary" value="Search"/> -->
                <select name="Anime">
-                  <option value="fma_brotherhood">Full Metal Alchemist</option>
-                  <option value="black_clover">Black Clover</option>
-                  <option value="dragon_ball">Dragon Ball</option>
-                  <option value="bleach">Bleach</option>
-                  <option value="jujutsu_kaisen">Jujutsu Kaisen</option>
-                  <option value="naruto">Naruto</option>
-                  <option value="gintama">Gintama</option>
-                  <option value="one_piece">One Piece</option>
-                  <option value="demon_slayer">Demon Slayer</option>
-                  <option value="attack_on_titan">Attack on Titan</option>
-                  <option value="hunter_x_hunter">Hunter x Hunter</option>
-                  <option value="boku_no_hero_academia">My Hero Academia</option>
+                  <option id="fma_brotherhood">Full Metal Alchemist</option>
+                  <option id="black_clover">Black Clover</option>
+                  <option id="dragon_ball">Dragon Ball</option>
+                  <option id="bleach">Bleach</option>
+                  <option id="jujutsu_kaisen">Jujutsu Kaisen</option>
+                  <option id="naruto">Naruto</option>
+                  <option id="gintama">Gintama</option>
+                  <option id="one_piece">One Piece</option>
+                  <option id="demon_slayer">Demon Slayer</option>
+                  <option id="attack_on_titan">Attack on Titan</option>
+                  <option id="hunter_x_hunter">Hunter x Hunter</option>
+                  <option id="boku_no_hero_academia">My Hero Academia</option>
                </select>
             </form>
          </div>
+      </section>
+
+      <section id="output">
+         <div id= fact-field>
+            <p id="txt-field"></p>
+         </div>
+
       </section>
       <!--Reference to the script.js JavaScript file-->
       <script src="script.js"></script>
