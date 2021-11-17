@@ -1,3 +1,18 @@
+// function preload(){
+//   fma = loadImage("https://ibb.co/Yc0fT3b")
+//   blackClover = loadImage("https://ibb.co/McWkSx9")
+//   dragonBall = loadImage("https://ibb.co/wdxrt55")
+//   bleach = loadImage("https://ibb.co/PgyCx8k")
+//   jujutsu = loadImage("https://ibb.co/c2JZ60J")
+//   naruto = loadImage("https://ibb.co/G3VvX65")
+//   gintama = loadImage("https://ibb.co/GHdvjcH")
+//   onePiece = loadImage("https://ibb.co/Rh28pdx")
+//   demonSlayer = loadImage("https://ibb.co/DpPHDtS")
+//   aot = loadImage("https://ibb.co/przZsqD")
+//   hunter = loadImage("https://ibb.co/CwWxWLP")
+//   mha = loadImage("https://ibb.co/zRzLBMv")
+// }
+
 function setup() {
   createCanvas(400, 400);
   getAnimeFact().then((data) => {
