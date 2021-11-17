@@ -1,5 +1,12 @@
 let backgroundImg
 let facts = []
+let fade;
+let fadeAmount = 1
+let x = 200
+let y = 100
+size = 100
+let i = 1
+let c = 0
 
 class Fact {
   constructor(x, y, color, fact) {
@@ -52,6 +59,77 @@ function draw() {
   for(let fact of facts){
     fact.display()
   }
+
+  let colLike = color(242, 64, 51);
+  let button1 = createButton('Like');
+  button1.style('background-color', colLike);
+  button1.position(windowWidth/4 - 100, windowHeight/4 - 100);
+  button1.mousePressed(Like)
+
+  let colKnew = color(51, 153, 242);
+  let button2 = createButton('Knew it!');
+  button2.style('background-color', colKnew);
+  button2.position(windowWidth/2 - 100, windowHeight/4-100);
+  button2.mousePressed(Knew)
+
+  if (c == 1) {
+      if (i == 1) {
+          if (fade <= 0){
+             fadeAmount = 10;
+          }
+
+          x -= 0.1
+          y -= 0.1
+          size += 0.2
+
+          if (fade >= 255) {
+              fadeAmount = 0;
+              fade = 0
+              i++
+          }
+
+          fade += fadeAmount;
+
+          noStroke()
+          fill(255, 0, 0, fade)
+          //heart shape 68-72 https://editor.p5js.org/Mithru/sketches/Hk1N1mMQg
+          beginShape()
+          vertex(x, y);
+          bezierVertex(x - size / 2, y - size / 2, x - size, y + size / 3, x, y + size);
+          bezierVertex(x + size, y + size / 3, x + size / 2, y - size / 2, x, y);
+          endShape(CLOSE)
+      }
+
+  } else if (c == 2) {
+      if (i == 1) {
+          if (fade <= 0){
+             fadeAmount = 10;
+          }
+
+          x -= 0.1
+          y -= 0.1
+          size += 0.2
+
+          if (fade >= 255) {
+              fadeAmount = 0;
+              fade = 0
+              i++
+          }
+          
+          fade += fadeAmount;
+
+          noStroke()
+          fill(0, 0, 255, fade)
+          //heart shape 68-72 https://editor.p5js.org/Mithru/sketches/Hk1N1mMQg
+          beginShape()
+          vertex(x, y);
+          bezierVertex(x - size / 2, y - size / 2, x - size, y + size / 3, x, y + size);
+          bezierVertex(x + size, y + size / 3, x + size / 2, y - size / 2, x, y);
+          endShape(CLOSE)
+      }
+
+
+  }
 }
 
 function getAnimeFact(factID){
@@ -68,4 +146,22 @@ function getAnimeFact(factID){
   }).catch(err => {
     console.log(err)
   })
+}
+
+function Like() {
+  c = 1
+  x = 200
+  y = 100
+  size = 100
+  i = 1
+  fade = 0
+}
+
+function Knew() {
+  c = 2
+  x = 200
+  y = 100
+  size = 100
+  i = 1
+  fade = 0
 }
